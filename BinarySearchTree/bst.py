@@ -54,15 +54,26 @@ class BinarySearchTree:
 
         return False
 
+    def get_min_node(self, root: Node):
+        ''' Returns min node'''
+
+        temp = root
+        
+        while temp.left:
+            temp = temp.left
+
+        return temp
+
     def delete(self, root: Node, key):
-        ''' Deletes node = key. Returns true if deletion was successful and false if not'''    
+        ''' Deletes node = key. Returns true if deletion was successful and false if not'''
+
         if root is None:
             return root
         elif key < root.val:
             root.left = self.delete(root.left, key)
         elif key > root.val:
             root.right = self.delete(root.right, key)
-        else:                     
+        else: # Found node with key we want                  
             if root.left is None:
                 temp = root.right
                 root = None
@@ -72,17 +83,8 @@ class BinarySearchTree:
                 root = None
                 return temp
 
-            #if it has two children??
+            temp = self.get_min_node(root.right)
+            root.val = temp.val
+            self.delete(root.right, temp.val)
+            return root
 
-
-tree = BinarySearchTree()
-
-for x in range(100):
-    val = random.randint(48, 999999)
-    tree.insert(val)
-
-tree.insert(47)
-
-print(tree.find(47))
-tree.delete(tree.root, 47)
-print(tree.find(47))
