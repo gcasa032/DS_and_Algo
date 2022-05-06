@@ -69,7 +69,7 @@ In C, we can represent a tree node using structures. In other languages we can u
 
 5. ### In Binary tree where every node has 0 or 2 children, the number of leaf nodes is always one more than nodes with two children.
 
-      *L = T + 1
+      L = T + 1
       Where L = Number of leaf nodes
       T = Number of internal nodes with two children
       Proof:
@@ -80,4 +80,4 @@ In C, we can represent a tree node using structures. In other languages we can u
       So , L = 2^h-1^
           T = 2^h-1^ - 1
       Therefore L = T + 1
-      Hence proved*
+      Hence proved
