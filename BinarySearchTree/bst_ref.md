@@ -58,9 +58,9 @@ In C, we can represent a tree node using structures. In other languages we can u
     In some books, the height of the root is considered as 0. In this convention, the above formula becomes *2<sup>h+1<sup> – 1* 
 
 3. ### In a Binary Tree with N nodes, minimum possible height or the minimum number of levels is Log2(N+1).
-    This can be directly derived from point 2 above. If we consider the convention where the height of a root node is considered as 0, then above formula for minimum possible height becomes *| Log~2~(N+1) | – 1* 
+    This can be directly derived from point 2 above. If we consider the convention where the height of a root node is considered as 0, then above formula for minimum possible height becomes *| Log<sub>2</sub>(N+1) | – 1* 
 
-4. ### A Binary Tree with L leaves has at least *| Log~2~ |+ 1*   levels. 
+4. ### A Binary Tree with L leaves has at least *| Log<sub>2</sub> |+ 1*   levels. 
     A Binary tree has the maximum number of leaves (and a minimum number of levels) when all levels are fully filled. Let all leaves be at level l, then below is true for the number of leaves L.
 
       *L   <=  2l-1  [From Point 1]
