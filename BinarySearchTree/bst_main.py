@@ -1,4 +1,4 @@
-from bss import Node, BinarySearchTree
+from bst import Node, BinarySearchTree
 import random
 
 tree = BinarySearchTree()
