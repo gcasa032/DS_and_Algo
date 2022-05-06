@@ -74,7 +74,7 @@ class BinarySearchTree:
         elif key > root.val:
             root.right = self.delete(root.right, key)
         else: # Found node with key we want                  
-            if root.left is None:
+            if root.left is None: 
                 temp = root.right
                 root = None
                 return temp
@@ -82,9 +82,28 @@ class BinarySearchTree:
                 temp = root.left
                 root = None
                 return temp
-
+            # Node has 2 children
             temp = self.get_min_node(root.right)
             root.val = temp.val
             self.delete(root.right, temp.val)
             return root
 
+    def inorder_traversal(self):
+        ''' Returns list of node values of tree in order'''
+        def __inorder_helper( root : Node):
+
+            nodeList = []
+
+            if root.left:
+                nodeList = __inorder_helper(root.left)
+            
+            nodeList.append(root.val)
+
+            if root.right:
+                nodeList = nodeList + __inorder_helper(root.right)
+
+            return nodeList
+
+        return __inorder_helper(self.root)
+
+    
