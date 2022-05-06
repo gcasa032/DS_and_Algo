@@ -63,20 +63,21 @@ This can be directly derived from point 2 above. If we consider the convention w
 4. A Binary Tree with L leaves has at least | Log2L |+ 1   levels. 
 A Binary tree has the maximum number of leaves (and a minimum number of levels) when all levels are fully filled. Let all leaves be at level l, then below is true for the number of leaves L. 
 
-L   <=  2l-1  [From Point 1]
-l =   | Log2L | + 1 
-where l is the minimum number of levels.
+  L   <=  2l-1  [From Point 1]
+  l =   | Log2L | + 1 
+  where l is the minimum number of levels.
+
 5) In Binary tree where every node has 0 or 2 children, the number of leaf nodes is always one more than nodes with two children.
 
-L = T + 1
-Where L = Number of leaf nodes
-T = Number of internal nodes with two children
-Proof:
-No. of leaf nodes (L) i.e. total elements present at the bottom of tree = 
-2h-1 (h is height of tree)
-No. of internal nodes = {total no. of nodes} - {leaf nodes} = 
-{ 2h - 1 } - {2h-1} = 2h-1 (2-1) - 1 = 2h-1 - 1
-So , L = 2h-1
-     T = 2h-1 - 1
-Therefore L = T + 1
-Hence proved
+  L = T + 1
+  Where L = Number of leaf nodes
+  T = Number of internal nodes with two children
+  Proof:
+  No. of leaf nodes (L) i.e. total elements present at the bottom of tree = 
+  2h-1 (h is height of tree)
+  No. of internal nodes = {total no. of nodes} - {leaf nodes} = 
+  { 2h - 1 } - {2h-1} = 2h-1 (2-1) - 1 = 2h-1 - 1
+  So , L = 2h-1
+      T = 2h-1 - 1
+  Therefore L = T + 1
+  Hence proved
